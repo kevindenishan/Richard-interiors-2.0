@@ -1,6 +1,6 @@
 export const HeroSection = () => {
     return <section id="Hero" className="realtive min-h-screen flex flex-col item-center justify-content px-4">
-        <div className="container max-w-4xl mx-auto text-center z-10">
+        <div className="container max-w-4xl mx-auto text-center z-5">
 
             <div className=" space-y-6 pt-65 " >
                 <h1 className=" text-primary text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight ">
@@ -19,9 +19,7 @@ export const HeroSection = () => {
             </div>
 
         </div>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4 animate-bounce font-xs text-sm text-foreground/70 flex flex-col items-center">
-            <span>Scroll</span>
-        </div>
+        
         
 
 

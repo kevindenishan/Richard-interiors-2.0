@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavBar } from "../Components/NavBar";
 import { ThemeToggle } from "../Components/ThemeToggle";
+import { Footer } from "../Components/Footer";
 
 export const ContactUs = () => {
     const [fullName, setFullName] = useState("");
@@ -112,6 +113,7 @@ export const ContactUs = () => {
                     )}
                 </div>
             </main>
+            <Footer />
         </div>
     );
 };

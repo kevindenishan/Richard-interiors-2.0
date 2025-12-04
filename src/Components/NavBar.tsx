@@ -29,7 +29,7 @@ export const NavBar = () => {
     return (
         <nav className={cn(
             "fixed w-full z-40 transition-all duration-300 "
-            , isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "bg-transparent")}>
+            , isScrolled ? " bg-background/80 backdrop-blur-md shadow-xs" : "bg-transparent")}>
             <div className="container flex items-center justify-between ">
                 <a href="#Hero" className="text-xl font-bold text-primary flex-center py-5">
                     <span className="relative z-10 text-secondary" >
@@ -40,27 +40,27 @@ export const NavBar = () => {
                 {/* {Desktop Navigation} */}
                 <div className="hidden md:flex space-x-8">
                     {items.map((item, key) => (
-                        <a href={item.href} key={key} className="text-foreground/80 hover:text-secondary transition-colors duration-300 hover:scale-102 duration-300">
+                        <a href={item.href} key={key} className="text-foreground/80 hover:text-secondary transition-colors duration-300 hover:scale-105 ">
                             {item.name}
                         </a>
                     ))}
                 </div>
                 {/* {Mobile Navigation} */}
 
-                <button onClick={() => setIsMenuOpen(prev => !prev)} 
-                    className="md:hidden absolute top-5 right-5 p-2 text-foreground z-50 rounded-md bg-muted/70 hover:bg-muted transition-colors duration-300 focus:outline-hidden focus:ring-1 focus:ring-offset-1 focus:ring-primary"
+                <button onClick={() => setIsMenuOpen(prev => !prev)}
+                    className="md:hidden fixed top-4 right-5 p-2 text-foreground z-50 rounded-md bg-muted/70 hover:bg-muted transition-colors duration-300 focus:outline-hidden focus:ring-1 focus:ring-offset-1 focus:ring-primary "
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
-                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
 
                 <div className={cn(
-                    "fixed inset-0 bg-background/95 backdrop-blur-md flex-col items-center justify-center z-40",
-                    "transition-all duration-300 md:hidden flex",
-                    isMenuOpen ? "opacity-full pointer-events-auto" : "opacity-0 pointer-events-none "
+                    "fixed inset-0 bg-background/95 backdrop-blur-md flex flex-col items-center justify-center z-40",
+                    "transition-all duration-300 md:hidden",
+                    isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 )}>
-                    
-                    
-                    <div className="flex flex-col items-center justify-start w-full text-xl space-y-10 animate-ease-in-out-right transition-all duration-300">
+
+
+                    <div className="flex flex-col items-center justify-start w-full text-xl space-y-10 animate-ease-in-right transition-all duration-300">
                         {items.map((item, key) => (
                             <a
                                 href={item.href} key={key} className="text-foreground/80 hover:text-secondary transition-all duration-300 hover:scale-105"
